@@ -111,5 +111,6 @@ export const GlobalStyles = createGlobalStyle`
     }
     a {
         font-weight: var(--bold);
+        text-decoration: none;
     }
 `
