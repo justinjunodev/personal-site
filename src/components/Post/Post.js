@@ -2,19 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import useSiteMeta from '../../hooks/useSiteMeta'
 import Layout from '../Layout'
+import Share from '../Share'
 import SEO from '../SEO'
 
-const Post = ({ data: { mdx: post } }) => (
-  <Layout>
-    <SEO title={post.frontmatter.title} />
-    <h1>Blog.</h1>
-    <article>
-      <h2>{post.frontmatter.title}</h2>
-      <MDXRenderer>{post.body}</MDXRenderer>
-    </article>
-  </Layout>
-)
+const Post = ({ data: { mdx: post } }) => {
+  const meta = useSiteMeta()
+  const source = `${meta.url}/blog/${post.frontmatter.slug}`
+  return (
+    <Layout>
+      <SEO title={post.frontmatter.title} />
+      <h1>Blog.</h1>
+      <article>
+        <h2>{post.frontmatter.title}</h2>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </article>
+      <Share title={post.frontmatter.title} url={source} />
+    </Layout>
+  )
+}
 
 Post.propTypes = {
   data: PropTypes.object.isRequired,
