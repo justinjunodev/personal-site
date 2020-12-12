@@ -28,5 +28,12 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-axe',
+      options: {
+        debounce: 1000,
+        showInProduction: false,
+      },
+    },
   ],
 }
