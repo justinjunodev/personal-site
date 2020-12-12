@@ -6,7 +6,7 @@ import Link from '../components/Link'
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Page Not found!" />
-    <h2>Page Not Found!</h2>
+    <h1>Page Not Found.</h1>
     <p>
       This page does not exist or has been moved. Go to{' '}
       <Link to="/">home page</Link>?

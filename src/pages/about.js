@@ -6,7 +6,7 @@ import Link from '../components/Link'
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <h2>About.</h2>
+    <h1>About.</h1>
     <p>
       Hello, my name is Justin Juno. I'm a Frontend Developer and UI Designer
       from East Texas. I'm 33 years young, infinitely curious, and kind. I love
@@ -14,15 +14,17 @@ const AboutPage = () => (
       dachshund. I also enjoy woodworking, grilling, and binge-watching the
       Gilmore Girls.
     </p>
-    <h3>I'm seeking career opportunities.</h3>
+    <h2>I'm seeking career opportunities.</h2>
     <p>
       I'd love to join a talented team of diverse engineers who value
       aesthetics, accessibility, and mentorship. While every product and feature
       is different, my goal remains the same. Make the experience memorable,
-      intuitive, and inclusive for all users. My library of choice is React. I
-      tend to couple it with Styled Components, D3, Framer Motion, GraphQL, and
-      Jest/ Enzyme. However, I have experience with a lot more and enjoy the
-      challenge of learning something new.
+      intuitive, and inclusive for all users.
+    </p>
+    <p>
+      My library of choice is React. I tend to couple it with Styled Components,
+      D3, Framer Motion, GraphQL, and Jest/ Enzyme. However, I have experience
+      with a lot more and enjoy the challenge of learning something new.
     </p>
     <p>
       <em>
@@ -30,6 +32,19 @@ const AboutPage = () => (
         2021.
       </em>
     </p>
+    <h3>Goals for 2021.</h3>
+    <ul>
+      <li>Consume and create more content.</li>
+      <li>
+        Contribute to the open-source community and engage in more
+        conversations.
+      </li>
+      <li>
+        Provide mentorship and help both aspiring and seasoned developers
+        through my personal blog/ playground.
+      </li>
+      <li>Learn a new language such as TypeScript, Go, or Elixir.</li>
+    </ul>
     <h4>Get in touch.</h4>
     <p>
       If you'd like to learn more about me, discuss employment possibilities, or

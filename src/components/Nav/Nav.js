@@ -3,7 +3,9 @@ import Link from '../Link'
 
 const Nav = () => (
   <nav>
-    <span>Justin Juno</span>
+    <span>
+      <Link to="/">Juno</Link>
+    </span>
     <ul>
       <li>
         <Link to="/about">About</Link>

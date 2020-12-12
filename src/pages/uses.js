@@ -6,7 +6,7 @@ import Link from '../components/Link'
 const UsesPage = () => (
   <Layout>
     <SEO title="Uses" />
-    <h2>Uses</h2>
+    <h1>Uses.</h1>
     <p>
       Curious about my current setup, tools, or apps I use regularly? Here's a
       list! Inspired by and part of the{' '}
@@ -19,7 +19,7 @@ const UsesPage = () => (
       </Link>{' '}
       by Wes Bos.
     </p>
-    <h3>Hardware.</h3>
+    <h2>Hardware.</h2>
     <ul>
       <li>
         <Link
@@ -52,7 +52,7 @@ const UsesPage = () => (
         - Quiet Comfort 35II Headphones
       </li>
     </ul>
-    <h3>Design + Development.</h3>
+    <h2>Design + Development.</h2>
     <ul>
       <li>
         <Link
@@ -115,7 +115,7 @@ const UsesPage = () => (
         - Offline access to 200+ API documentation sets.
       </li>
     </ul>
-    <h3>Productivity.</h3>
+    <h2>Productivity.</h2>
     <ul>
       <li>
         <Link
@@ -158,7 +158,7 @@ const UsesPage = () => (
         - The to do list to organize work & life.
       </li>
     </ul>
-    <h3>Learning.</h3>
+    <h2>Learning.</h2>
     <ul>
       <li>
         <Link
@@ -211,7 +211,7 @@ const UsesPage = () => (
         - Learn to code at home and earn certificates.
       </li>
     </ul>
-    <h3>Community.</h3>
+    <h2>Community.</h2>
     <ul>
       <li>
         <Link
