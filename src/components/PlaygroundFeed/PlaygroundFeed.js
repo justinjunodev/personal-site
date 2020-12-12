@@ -9,7 +9,7 @@ const PlaygroundFeed = () => {
   return (
     <div>
       {playgrounds.map(playground => (
-        <article key={playground.slug}>
+        <article key={playground.sandbox}>
           <Link to={playground.sandbox} label={playground.title} isExternal>
             <h3>{playground.title}</h3>
           </Link>

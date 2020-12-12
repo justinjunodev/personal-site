@@ -11,8 +11,8 @@ const AboutPage = () => (
       Hello, my name is Justin Juno. I'm a Frontend Developer and UI Designer
       from East Texas. I'm 33 years young, infinitely curious, and kind. I love
       spending time with my beautiful wife, our twin toddlers, and grumpy
-      dachshund. I also enjoy woodworking, grilling, and binge-watching the
-      Gilmore Girls.
+      dachshund. I also enjoy woodworking, grilling, and binge-watching Gilmore
+      Girls.
     </p>
     <h2>I'm seeking career opportunities.</h2>
     <p>
@@ -22,28 +22,29 @@ const AboutPage = () => (
       intuitive, and inclusive for all users.
     </p>
     <p>
-      My library of choice is React. I tend to couple it with Styled Components,
-      D3, Framer Motion, GraphQL, and Jest/ Enzyme. However, I have experience
-      with a lot more and enjoy the challenge of learning something new.
+      <strong>My library of choice is React</strong>. I tend to couple it with
+      Styled Components, D3, Framer Motion, GraphQL, and Jest/ Enzyme. However,
+      I have experience with a lot more and enjoy the challenge of learning
+      something new.
     </p>
     <p>
       <em>
-        Note: I'm currently on contract and will not be available until February
-        2021.
+        Note: I'm currently on contract and will not be available until
+        February.
       </em>
     </p>
     <h3>Goals for 2021.</h3>
     <ul>
       <li>Consume and create more content.</li>
-      <li>
-        Contribute to the open-source community and engage in more
-        conversations.
-      </li>
+      <li>Learn a new language such as TypeScript, Go, or Elixir.</li>
       <li>
         Provide mentorship and help both aspiring and seasoned developers
         through my personal blog/ playground.
       </li>
-      <li>Learn a new language such as TypeScript, Go, or Elixir.</li>
+      <li>
+        Contribute to the open-source community and engage in more
+        conversations.
+      </li>
     </ul>
     <h4>Get in touch.</h4>
     <p>

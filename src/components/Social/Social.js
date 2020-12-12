@@ -3,7 +3,7 @@ import { FaTwitter, FaGithubAlt, FaDev } from 'react-icons/fa'
 import Link from '../Link'
 
 const Social = () => (
-  <div>
+  <aside>
     <ul>
       <li>
         <Link
@@ -33,7 +33,7 @@ const Social = () => (
         </Link>
       </li>
     </ul>
-  </div>
+  </aside>
 )
 
 export default Social
