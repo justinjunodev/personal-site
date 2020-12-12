@@ -29,6 +29,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`work sans:400,400i,500,500i,700,700i`],
+        display: 'swap',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-axe',
       options: {
         debounce: 1000,
