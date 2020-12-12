@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import * as S from './styles'
 
 const Header = ({ title, children }) => (
-  <S.HeaderContent>
-    <S.HeaderHeading>{title}</S.HeaderHeading>
-    {children && <S.HeaderText>{children}</S.HeaderText>}
+  <header>
+    <h1>{title}</h1>
+    {children && <p>{children}</p>}
     <hr />
-  </S.HeaderContent>
+  </header>
 )
 
 Header.propTypes = {

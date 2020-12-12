@@ -5,19 +5,17 @@ import Link from '../Link'
 const PostFeed = () => {
   const posts = usePosts()
   return (
-    <div>
+    <>
       {posts.map(post => (
         <article key={post.slug}>
           <Link to={`/blog/${post.slug}`}>
             <h3>{post.title}</h3>
           </Link>
+          <span>Posted on {post.date}.</span>
           <p>{post.excerpt}</p>
-          <p>
-            <small>Posted on {post.date}</small>
-          </p>
         </article>
       ))}
-    </div>
+    </>
   )
 }
 

@@ -1,24 +1,23 @@
 import React from 'react'
-import * as S from './styles'
 import Link from '../Link'
 
 const Nav = () => (
-  <S.NavContent>
+  <nav>
     <Link to="/">
-      <S.NavLogo>Juno</S.NavLogo>
+      <span>Juno</span>
     </Link>
-    <S.NavMenu>
-      <S.NavMenuItem>
+    <ul>
+      <li>
         <Link to="/about">About</Link>
-      </S.NavMenuItem>
-      <S.NavMenuItem>
+      </li>
+      <li>
         <Link to="/blog">Blog</Link>
-      </S.NavMenuItem>
-      <S.NavMenuItem>
+      </li>
+      <li>
         <Link to="/uses">Uses</Link>
-      </S.NavMenuItem>
-    </S.NavMenu>
-  </S.NavContent>
+      </li>
+    </ul>
+  </nav>
 )
 
 export default Nav
