@@ -81,8 +81,11 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
     hr {
-        border: 1px solid;
-        margin: -1px 0;
+        border: none;
+        background: black;
+        height: var(--scale-1);
+        width: var(--scale-8);
+        margin: 0;
     }
     b,
     i,

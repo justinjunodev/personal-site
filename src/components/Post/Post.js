@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import useSiteMeta from '../../hooks/useSiteMeta'
 import Layout from '../Layout'
+import Header from '../Header'
 import Share from '../Share'
 import SEO from '../SEO'
 
@@ -13,7 +14,7 @@ const Post = ({ data: { mdx: post } }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <h1>Blog.</h1>
+      <Header title="Blog." />
       <article>
         <h2>{post.frontmatter.title}</h2>
         <MDXRenderer>{post.body}</MDXRenderer>

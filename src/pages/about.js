@@ -2,19 +2,18 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Link from '../components/Link'
+import Header from '../components/Header'
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <h1>About.</h1>
-    <p>
-      Hello, my name is Justin Juno. I'm a Frontend Developer and UI Designer
-      from East Texas. I'm 33 years young, infinitely curious, and kind. I love
-      spending time with my beautiful wife, our twin toddlers, and grumpy
-      dachshund. I also enjoy woodworking, grilling, and binge-watching Gilmore
-      Girls.
-    </p>
-    <h2>I'm seeking career opportunities.</h2>
+    <Header title="About." />
+    <h2>My name is Justin Juno.</h2>
+    I'm a Frontend Developer and UI Designer from East Texas. I'm 33 years
+    young, infinitely curious, and kind. I love spending time with my beautiful
+    wife, our twin toddlers, and grumpy dachshund. I also enjoy woodworking,
+    grilling, and binge-watching Gilmore Girls.
+    <h3>I'm seeking career opportunities.</h3>
     <p>
       I'd love to join a talented team of diverse engineers who value
       aesthetics, accessibility, and mentorship. While every product and feature

@@ -2,24 +2,27 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Link from '../components/Link'
+import Header from '../components/Header'
 
 const UsesPage = () => (
   <Layout>
     <SEO title="Uses" />
-    <h1>Uses.</h1>
+    <Header title="Uses." />
+    <h2>The Uses Project.</h2>
     <p>
-      Curious about my current setup, tools, or apps I use regularly? Here's a
-      list! Inspired by and part of the{' '}
+      Wes Bos recently launched{' '}
       <Link
         to="https://uses.tech/"
         label="View developer setups and gear."
         isExternal
       >
-        Uses Project
-      </Link>{' '}
-      by Wes Bos.
+        Uses.tech
+      </Link>
+      . A project and place for developers to share information about the gear,
+      tools, and apps they rely on or use regularly. Here is a glimpse into my
+      current setup.
     </p>
-    <h2>Hardware.</h2>
+    <h3>Hardware.</h3>
     <ul>
       <li>
         <Link
@@ -52,7 +55,7 @@ const UsesPage = () => (
         - Quiet Comfort 35II Headphones
       </li>
     </ul>
-    <h2>Design + Development.</h2>
+    <h3>Design + Development.</h3>
     <ul>
       <li>
         <Link
@@ -115,7 +118,7 @@ const UsesPage = () => (
         - Offline access to 200+ API documentation sets.
       </li>
     </ul>
-    <h2>Productivity.</h2>
+    <h3>Productivity.</h3>
     <ul>
       <li>
         <Link
@@ -158,7 +161,7 @@ const UsesPage = () => (
         - The to do list to organize work & life.
       </li>
     </ul>
-    <h2>Learning.</h2>
+    <h3>Learning.</h3>
     <ul>
       <li>
         <Link
@@ -211,7 +214,7 @@ const UsesPage = () => (
         - Learn to code at home and earn certificates.
       </li>
     </ul>
-    <h2>Community.</h2>
+    <h3>Community.</h3>
     <ul>
       <li>
         <Link
