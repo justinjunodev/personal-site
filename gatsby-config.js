@@ -65,5 +65,6 @@ module.exports = {
         showInProduction: false,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

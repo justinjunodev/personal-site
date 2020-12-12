@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Nav from '../Nav'
 import Social from '../Social'
 import Footer from '../Footer'
-import '../../styles/style.css'
+import { GlobalStyles } from '../../styles/theme'
 
 const Layout = ({ children }) => (
   <>
+    <GlobalStyles />
     <Nav />
     <main>{children}</main>
     <Social />
