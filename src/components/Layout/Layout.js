@@ -1,17 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { GlobalStyles } from '../../styles/theme'
+import * as S from './styles'
 import Nav from '../Nav'
 import Social from '../Social'
 import Footer from '../Footer'
-import { GlobalStyles } from '../../styles/theme'
 
 const Layout = ({ children }) => (
   <>
     <GlobalStyles />
-    <Nav />
-    <main>{children}</main>
-    <Social />
-    <Footer />
+    <S.LayoutWrapper>
+      <Nav />
+      <main>{children}</main>
+      <Social />
+      <Footer />
+    </S.LayoutWrapper>
   </>
 )
 

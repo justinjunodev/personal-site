@@ -14,9 +14,20 @@ export const GlobalStyles = createGlobalStyle`
         --scale-3: 1rem;
         --scale-2: .75rem;
         --scale-1: 0.5rem; 
+        --highlight: #ff8906;
+        --secondary: #f25f4c;
+        --tertiary: #e53170;
+        --gradient: linear-gradient(115deg, #ff8906 0%, #f25f4c 100%); 
+        --dark: #000001;
+        --dark-alt: #0f0e17;
+        --light: #fffffe;
+        --light-alt: #a7a9be;
     }
+
     * {
         box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
     html {
         font-size: 16px;
@@ -26,10 +37,17 @@ export const GlobalStyles = createGlobalStyle`
         font-family: var(--sans);
         font-weight: var(--copy);
         font-size: var(--scale-3);
+        color: var(--light-alt);
         line-height: 2rem;
-        max-width: 45rem;
-        width: calc(100% - var(--scale-7));
-        margin: var(--scale-5) auto var(--scale-7);
+        background: var(--dark);
+        ::before {
+            content: '';
+            display: block;
+            height: .4rem;
+            width: 100%;
+            background-color: var(--primary);
+            background-image: var(--gradient);
+        }
     }
     h1,
     h2,
@@ -37,6 +55,7 @@ export const GlobalStyles = createGlobalStyle`
     h4,
     h5 {
         font-weight: var(--heading);
+        color: var(--light);
         line-height: var(--scale-5);
         margin: var(--scale-5) 0 var(--scale-3);
     }
@@ -83,7 +102,8 @@ export const GlobalStyles = createGlobalStyle`
     }
     hr {
         border: none;
-        background: black;
+        background-color: var(--primary);
+        background-image: var(--gradient);
         height: .4rem;
         width: var(--scale-7);
         margin: 0;
