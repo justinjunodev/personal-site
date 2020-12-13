@@ -23,7 +23,6 @@ export const GlobalStyles = createGlobalStyle`
         --light: #fffffe;
         --light-alt: #a7a9be;
     }
-
     * {
         box-sizing: border-box;
         padding: 0;
@@ -101,12 +100,13 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
     hr {
+        display: block;
         border: none;
         background-color: var(--primary);
         background-image: var(--gradient);
         height: .4rem;
+        margin-top: var(--scale-5);
         width: var(--scale-7);
-        margin: 0;
     }
     b,
     i,
