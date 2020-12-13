@@ -6,14 +6,14 @@ export const GlobalStyles = createGlobalStyle`
         --heading: 700;
         --bold: 500;
         --copy: 400; 
-        --scale-8: 7.594rem;
-        --scale-7: 5.063rem;
+        --scale-8: 7.595rem;
+        --scale-7: 5.065rem;
         --scale-6: 3.375rem;
         --scale-5: 2.25rem;
         --scale-4: 1.5rem;
         --scale-3: 1rem;
-        --scale-2: .667rem;
-        --scale-1: 0.444rem; 
+        --scale-2: .75rem;
+        --scale-1: 0.5rem; 
     }
     * {
         box-sizing: border-box;
@@ -26,10 +26,10 @@ export const GlobalStyles = createGlobalStyle`
         font-family: var(--sans);
         font-weight: var(--copy);
         font-size: var(--scale-3);
-        line-height: calc(var(--scale-3) * 2);
+        line-height: 2rem;
         max-width: 45rem;
-        width: calc(100% - var(--scale-6));
-        margin: var(--scale-5) auto var(--scale-6);
+        width: calc(100% - var(--scale-7));
+        margin: var(--scale-5) auto var(--scale-7);
     }
     h1,
     h2,
@@ -38,11 +38,12 @@ export const GlobalStyles = createGlobalStyle`
     h5 {
         font-weight: var(--heading);
         line-height: var(--scale-5);
-        margin: var(--scale-5) 0;
+        margin: var(--scale-5) 0 var(--scale-3);
     }
     h1 {
         font-size: var(--scale-6);
         line-height: var(--scale-6);
+        margin-bottom: var(--scale-5);
     }
     h2 {
         font-size: var(--scale-5);
@@ -52,7 +53,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: var(--scale-4);
     }
     h4 {
-        font-size: calc(var(--scale-2) + var(--scale-1));
+        font-size: 1.25rem;
         line-height: var(--scale-3);
         margin-bottom: 0;
     }
@@ -72,7 +73,7 @@ export const GlobalStyles = createGlobalStyle`
     pre,
     table,
     blockquote {
-        margin-bottom: var(--scale-5);
+        margin-bottom: var(--scale-4);
     }
     ul ul,
     ol ol,
@@ -83,8 +84,8 @@ export const GlobalStyles = createGlobalStyle`
     hr {
         border: none;
         background: black;
-        height: var(--scale-1);
-        width: var(--scale-8);
+        height: .4rem;
+        width: var(--scale-7);
         margin: 0;
     }
     b,
