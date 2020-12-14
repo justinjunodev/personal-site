@@ -14,12 +14,13 @@ export const GlobalStyles = createGlobalStyle`
         --scale-3: 1rem;
         --scale-2: .75rem;
         --scale-1: 0.5rem; 
+        --border: 0.4rem;
         --highlight: #ff8906;
         --secondary: #f25f4c;
         --tertiary: #e53170;
         --gradient: linear-gradient(115deg, #ff8906 0%, #f25f4c 100%); 
         --dark: #000001;
-        --dark-alt: #0f0e17;
+        --dark-alt: #111119;
         --light: #fffffe;
         --light-alt: #a7a9be;
     }
@@ -42,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
         ::before {
             content: '';
             display: block;
-            height: .4rem;
+            height: var(--border);
             width: 100%;
             background-color: var(--primary);
             background-image: var(--gradient);
@@ -73,13 +74,13 @@ export const GlobalStyles = createGlobalStyle`
     h4 {
         font-size: 1.25rem;
         line-height: var(--scale-3);
-        margin-bottom: 0;
+        margin-bottom: var(--scale-2);
     }
     h5 {
         font-size: var(--scale-3);
         font-weight: var(--bold);
         line-height: var(--scale-3);
-        margin-bottom: 0;
+        margin-bottom: var(--scale-2);
     }
     strong,
     b {
@@ -104,7 +105,7 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
         background-color: var(--primary);
         background-image: var(--gradient);
-        height: .4rem;
+        height: var(--border);
         margin-top: var(--scale-5);
         width: var(--scale-7);
     }

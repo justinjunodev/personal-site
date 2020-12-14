@@ -1,7 +1,9 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import usePlaygrounds from '../../hooks/usePlaygrounds'
+
 import Link from '../Link'
+import * as S from './styles'
 
 const PlaygroundFeed = () => {
   const playgrounds = usePlaygrounds()
@@ -9,12 +11,12 @@ const PlaygroundFeed = () => {
   return (
     <div>
       {playgrounds.map(playground => (
-        <article key={playground.sandbox}>
+        <S.PlaygroundContent key={playground.sandbox}>
           <Link to={playground.sandbox} label={playground.title} isExternal>
-            <h3>{playground.title}</h3>
+            <S.PlaygroundHeading>{playground.title}</S.PlaygroundHeading>
           </Link>
           <MDXRenderer>{playground.body}</MDXRenderer>
-        </article>
+        </S.PlaygroundContent>
       ))}
     </div>
   )
