@@ -15,12 +15,15 @@ export const NavLogo = styled.span`
 export const NavMenu = styled.ul`
   display: flex;
   margin: 0;
+  list-style: none;
 `
 
 export const NavMenuItem = styled.li`
-  list-style: none;
-  margin-top: 0.25rem;
+  padding-left: 0;
+  ::before {
+    display: none;
+  }
   :not(:last-of-type) {
-    margin-right: var(--scale-3);
+    margin: 0 var(--scale-3) 0 0;
   }
 `

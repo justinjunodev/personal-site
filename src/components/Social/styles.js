@@ -8,6 +8,7 @@ export const SocialMenu = styled.ul`
 `
 
 export const SocialMenuItem = styled.li`
+  padding-left: 0;
   span {
     font-weight: var(--heading);
     color: var(--light);
@@ -16,7 +17,10 @@ export const SocialMenuItem = styled.li`
     font-size: var(--scale-4);
     display: block;
   }
+  ::before {
+    display: none;
+  }
   :not(:last-of-type) {
-    margin-right: var(--scale-3);
+    margin: 0 var(--scale-3) 0 0;
   }
 `

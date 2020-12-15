@@ -100,6 +100,28 @@ export const GlobalStyles = createGlobalStyle`
     ol ul {
         margin: 0;
     }
+    ul {
+        list-style: none;
+        display: inline-block;
+        margin-left: var(--scale-3);
+        li {
+            position: relative;
+            padding-left: var(--scale-3);
+            :not(:last-of-type) {
+                margin-bottom: var(--scale-1);
+            }
+            ::before {
+               content: "";
+               position: absolute;
+               left: 0;
+               top: var(--scale-2);
+               background-color: var(--primary);
+               background-image: var(--gradient);
+               width: var(--border);
+               height: var(--border); 
+            }
+        }
+    }
     hr {
         display: block;
         border: none;
