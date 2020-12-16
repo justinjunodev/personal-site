@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
     :root {
         --sans: 'Work Sans', sans-serif;
+        --mono: 'JetBrains Mono', monospace;
         --heading: 700;
         --bold: 500;
         --copy: 400; 
@@ -15,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
         --scale-2: .75rem;
         --scale-1: 0.5rem; 
         --border: 0.4rem;
-        --highlight: #ff8906;
+        --primary: #ff8906;
         --secondary: #f25f4c;
         --tertiary: #e53170;
         --gradient: linear-gradient(115deg, #ff8906 0%, #f25f4c 100%); 
@@ -159,5 +160,80 @@ export const GlobalStyles = createGlobalStyle`
     a {
         font-weight: var(--bold);
         text-decoration: none;
+    }
+    code[class*='language-'],
+    pre[class*='language-'] {
+        color: var(--light);
+        font-family: var(--mono);
+        font-style: italic;
+        font-size: .925rem;
+        background: var(--dark-alt);
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--scale-4);
+        -moz-tab-size: 2;
+        -o-tab-size: 2;
+        tab-size: 2;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+    }
+    pre[class*='language-'] {
+        padding: var(--scale-5);
+        margin: var(--scale-5) 0;
+        overflow: auto;
+    }
+    :not(pre) > code[class*='language-'] {
+        display: inline-block;
+        padding: 0 var(--scale-1);
+        white-space: normal;
+        background: var(--dark-alt);
+        color: var(--light);
+        margin: 0 2px;
+    }
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata,
+    .token.property,
+    .token.tag,
+    .token.constant,
+    .token.symbol,
+    .token.deleted,
+    .token.boolean,
+    .token.number,
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted,
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string,
+    .token.variable {
+        color: var(--light-alt);
+    }
+    .token.punctuation,
+    .token.regex,
+    .token.important,
+    .token.atrule,
+    .token.attr-value,
+    .token.function,
+    .token.keyword {
+        color: var(--primary);
+    }
+    .token.selector,
+    .token.important,
+    .token.atrule,
+    .token.keyword,
+    .token.builtin {
+        color: var(--secondary);
     }
 `

@@ -22,30 +22,30 @@ When a function is invoked, a Local Execution Context is created. The responsibi
 
 The reason functions are processed within a separate context is because they have their own scope. Depending on where the function is called and what is passed to it, some data/ values within the function may not be accessible globally. The separate context helps the JavaScript engine translate our code and reduces parsing errors.
 
-### 4. The Call Stack
+### 4. The Call Stack.
 
 The Call Stack in JavaScript is a data structure that records and keeps track of where we are in the program. It follows the LIFO principle, last-in, first-out. Meaning our code is executed line by line, from top to bottom (sound familiar?). This is because JavaScript is single-threaded, meaning it cannot multitask.
 
 For example, when a function is invoked, it is pushed to the top of the stack, processed, and then removed or popped from the stack when complete. If the function contains and invokes additional functions, these will be added to the top of the stack and processed before returning to the previous function. Once the function(s) are finished, the JavaScript engine will resume parsing the Global Execution Context (if applicable), check the Queue, and wait for future invocations/ events. Don't worry, there is an example of this below.
 
-### 5. The Queue
+### 5. The Queue.
 
 Even though JavaScript is a synchronous language and isn't capable of multitasking, we have Web APIs (DOM, AJAX, and Timers) and some JavaScript features (Callbacks, Promises, Async/ Await) that give us the ability to manipulate and write JavaScript code that behaves asynchronously.
 
 When we utilize these apis, features, or process a user-related event (such as a click or key press), they are added to the Queue. However, the Call Stack will not accept or process any events from the Queue until it is empty. Meaning the JavaScript engine has to parse our Global Execution Context and any invoked functions before checking for/ processing items in the Queue.
 
-### 6. Putting It All Together
+### Putting It All Together.
 
 This is a lot of information to take in. Here is an example of a JavaScript program, with lots of logs to the console. Within each console log statement, I've briefly summarized the action that is happening and have prefaced it with a number. The number represents the order it'll print to the console when our program runs. To demonstrate the Queue, I've used setTimeout() from our browsers Web API. I've set the timeout to zero on both instances, to show that it won't impact the order of our logs even though if it there isn't an actual delay.
 
 ```javascript
 console.log("1. JavaScript Engine is Processing Program.")
-console.log("2. Global Execution Context Created and Pushed to Callstack.")
+console.log("2. Global Execution Context Created. Pushed to Callstack.")
 
 setTimeout(
   () =>
     console.log(
-      "9. I'm added to the Queue and will be processed after the Global Execution Context."
+      "9. Added to Queue. Will be processed after Global Execution Context."
     ),
   0
 )
@@ -54,43 +54,41 @@ function foo() {
   setTimeout(
     () =>
       console.log(
-        "10. I'm also added to the Queue. Even though I'm within an invoked function."
+        "10. Added to the Queue, even though I'm within an invoked function."
       ),
     0
   )
 }
 
 function bar() {
-  console.log("4. Bar Local Execution Context Created and Pushed to Callstack.")
-  console.log(
-    "5. Bar Local Execution Context Created and Popped from Callstack."
-  )
+  console.log("4. Bar Local Execution Context Created. Pushed to Callstack.")
+  console.log("5. Bar LEC Finished. Popped from Callstack.")
 }
 
 function baz() {
   foo()
   console.log("3. Baz Local Execution Context Created. Pushed to Callstack.")
   bar()
-  console.log("6. Baz Local Execution Context Finished. Popped from Callstack.")
+  console.log("6. Baz LEC Finished. Popped from Callstack.")
 }
 
 baz()
 
-console.log("7. Global Execution Context Finished and Removed From Callstack.")
-console.log("8. Callstack is empty. Now it'll process events from the Queue.")
+console.log("7. GEC Finished. Removed From Callstack.")
+console.log("8. Callstack is empty and will process events from the Queue.")
 ```
 
-#### Wrapping Up
+#### Wrapping Up.
 
 I hope this post helped you get a better understanding of the Thread of Execution in JavaScript. If you'd like to dive deeper in to the subject and view more examples, I'd highly recommend the following:
 
-##### Video Resources
+##### Video Resources:
 
 - Philip Roberts - [What the Heck is the Event Loop Anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - Code Smith - [Introduction to Functions, Execution Context and the Call Stack](https://www.youtube.com/watch?v=exrc_rLj5iw)
 - Colt Steele - [The JS Call Stack Explained in 9 Minutes](https://www.youtube.com/watch?v=W8AeMrVtFLY)
 
-##### Written Resources
+##### Written Resources:
 
 - Gaurav Pandvia - [Understanding JavaScript Function Executions](https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec)
 - Charles Freeborn - [JavasScript Call Stack What It Is and Why It's Necessary](https://www.freecodecamp.org/news/understanding-the-javascript-call-stack-861e41ae61d4/)

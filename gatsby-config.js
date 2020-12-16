@@ -37,6 +37,15 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve('./src/components/Post'),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+            },
+          },
+        ],
       },
     },
     {
@@ -54,7 +63,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`work sans:400,400i,500,500i,700,700i`],
+        fonts: [
+          `work sans:400,400i,500,500i,700,700i`,
+          `jetbrains mono:400,400i`,
+        ],
         display: 'swap',
       },
     },
