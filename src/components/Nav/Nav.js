@@ -4,9 +4,11 @@ import Link from '../Link'
 
 const Nav = () => (
   <S.NavContent>
-    <Link to="/">
-      <S.NavLogo>Juno </S.NavLogo>
-    </Link>
+    <S.NavLogo>
+      <Link to="/">
+        <span>Juno</span>
+      </Link>
+    </S.NavLogo>
     <S.NavMenu>
       <S.NavMenuItem>
         <Link to="/about">About</Link>

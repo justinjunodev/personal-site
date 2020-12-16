@@ -11,7 +11,7 @@ import Link from '../Link'
 const Social = () => (
   <S.SocialMenu>
     <S.SocialMenuItem>
-      <span>Connect: </span>
+      <span>Let's Connect:</span>
     </S.SocialMenuItem>
     <S.SocialMenuItem>
       <Link

@@ -13,7 +13,9 @@ export const PostHeading = styled.h3`
   margin: 0;
 `
 
-export const PostDate = styled.span``
+export const PostDate = styled.p`
+  margin-bottom: 0;
+`
 
 export const PostExcerpt = styled.p`
   margin: var(--scale-3) 0 0;

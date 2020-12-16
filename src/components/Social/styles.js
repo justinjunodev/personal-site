@@ -9,6 +9,8 @@ export const SocialMenu = styled.ul`
 
 export const SocialMenuItem = styled.li`
   padding-left: 0;
+  display: flex;
+  align-items: center;
   span {
     font-weight: var(--heading);
     color: var(--light);
@@ -22,5 +24,17 @@ export const SocialMenuItem = styled.li`
   }
   :not(:last-of-type) {
     margin: 0 var(--scale-3) 0 0;
+  }
+  a {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    :hover {
+      transform: scale(1.1);
+    }
+    :active {
+      transform: scale(0.9);
+    }
+    ::after {
+      display: none;
+    }
   }
 `

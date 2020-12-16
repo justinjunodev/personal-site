@@ -15,7 +15,9 @@ const PlaygroundFeed = () => {
           <Link to={playground.sandbox} label={playground.title} isExternal>
             <S.PlaygroundHeading>{playground.title}</S.PlaygroundHeading>
           </Link>
-          <MDXRenderer>{playground.body}</MDXRenderer>
+          <S.PlaygroundInfo>
+            <MDXRenderer>{playground.body}</MDXRenderer>
+          </S.PlaygroundInfo>
         </S.PlaygroundContent>
       ))}
     </div>

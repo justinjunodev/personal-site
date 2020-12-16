@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
         --dark: #000001;
         --dark-alt: #111119;
         --light: #fffffe;
-        --light-alt: #a7a9be;
+        --light-alt: #b7b9ce;
     }
     * {
         box-sizing: border-box;
@@ -160,6 +160,26 @@ export const GlobalStyles = createGlobalStyle`
     a {
         font-weight: var(--bold);
         text-decoration: none;
+        display: inline-block;
+        position: relative;
+        color: var(--light);
+        ::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 1px;
+            left: 0;
+            background-color: var(--primary);
+            background-image: var(--gradient);
+            transform-origin: bottom right;
+            transition: transform 0.3s cubic-bezier(0.85, 0, 0.075, 1);
+        }
+        :hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
     }
     code[class*='language-'],
     pre[class*='language-'] {
@@ -184,7 +204,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     pre[class*='language-'] {
         padding: var(--scale-5);
-        margin: var(--scale-5) 0;
+        margin: var(--scale-5) 0 var(--scale-6);
         overflow: auto;
     }
     :not(pre) > code[class*='language-'] {

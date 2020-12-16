@@ -8,13 +8,13 @@ As developers, we must understand how the languages, frameworks, and tools we ch
 
 ### 1. The JavaScript Engine.
 
-Browsers have a built-in JavaScript engine that is responsible for reading and translating JavaScript into machine code. Without this engine, our computers wouldn't understand how to process or execute our JavaScript programs. This is a synchronous process, meaning our code is interpreted one line at a time, from top to bottom.
+Browsers have a built-in JavaScript engine that is responsible for reading and translating JavaScript into machine code. Without this engine, our computers wouldn't understand how to process or execute our JavaScript programs. <ins>This is a synchronous process, meaning our code is interpreted one line at a time, from top to bottom</ins>.
 
 ### 2. The Global Execution Context.
 
 When the JavaScript Engine is interpreting our code, the first thing it does is create a Global Execution Context. This context wraps all of our JavaScript code and provides a global environment for us to reference/ access any globally scoped variables or functions from the window object.
 
-The Global Execution Context is the first item pushed onto our Call Stack (more on that shortly) and it'll remain there until all of our code has been processed by the JavaScript engine.
+The Global Execution Context is the first item pushed onto our Call Stack _(more on that shortly)_ and it'll remain there until all of our code has been processed by the JavaScript engine.
 
 ### 3. The Local or Function Execution Context.
 
@@ -24,19 +24,26 @@ The reason functions are processed within a separate context is because they hav
 
 ### 4. The Call Stack.
 
-The Call Stack in JavaScript is a data structure that records and keeps track of where we are in the program. It follows the LIFO principle, last-in, first-out. Meaning our code is executed line by line, from top to bottom (sound familiar?). This is because JavaScript is single-threaded, meaning it cannot multitask.
+The Call Stack in JavaScript is a data structure that records and keeps track of where we are in the program. It follows the LIFO principle, _last-in, first-out_. Meaning our code is executed line by line, from top to bottom _(sound familiar?)_. This is because JavaScript is single-threaded, meaning it cannot multitask.
 
-For example, when a function is invoked, it is pushed to the top of the stack, processed, and then removed or popped from the stack when complete. If the function contains and invokes additional functions, these will be added to the top of the stack and processed before returning to the previous function. Once the function(s) are finished, the JavaScript engine will resume parsing the Global Execution Context (if applicable), check the Queue, and wait for future invocations/ events. Don't worry, there is an example of this below.
+For example, when a function is invoked, it is pushed to the top of the stack, processed, and then removed or popped from the stack when complete. If the function contains and invokes additional functions, these will be added to the top of the stack and processed before returning to the previous function. Once the function(s) are finished, the JavaScript engine will resume parsing the Global Execution Context _(if applicable)_, check the Queue, and wait for future invocations/ events.
+
+<ins>
+  It's okay if this doesn't make sense yet, there is an example of below that'll
+  clear things up.
+</ins>
 
 ### 5. The Queue.
 
-Even though JavaScript is a synchronous language and isn't capable of multitasking, we have Web APIs (DOM, AJAX, and Timers) and some JavaScript features (Callbacks, Promises, Async/ Await) that give us the ability to manipulate and write JavaScript code that behaves asynchronously.
+Even though JavaScript is a synchronous language and isn't capable of multitasking, we have Web APIs _(DOM, AJAX, and Timers)_ and some JavaScript features _(Callbacks, Promises, Async/ Await)_ that give us the ability to manipulate and write JavaScript code that behaves asynchronously.
 
-When we utilize these apis, features, or process a user-related event (such as a click or key press), they are added to the Queue. However, the Call Stack will not accept or process any events from the Queue until it is empty. Meaning the JavaScript engine has to parse our Global Execution Context and any invoked functions before checking for/ processing items in the Queue.
+When we utilize these APIs, features, or process a user-related event _(such as a click or key press)_, they are added to the Queue. <ins>However, the Call Stack will not accept or process any events from the Queue until it is empty.</ins> Meaning the JavaScript engine has to parse our Global Execution Context and any invoked functions before checking for/ processing items in the Queue.
 
 ### Putting It All Together.
 
-This is a lot of information to take in. Here is an example of a JavaScript program, with lots of logs to the console. Within each console log statement, I've briefly summarized the action that is happening and have prefaced it with a number. The number represents the order it'll print to the console when our program runs. To demonstrate the Queue, I've used setTimeout() from our browsers Web API. I've set the timeout to zero on both instances, to show that it won't impact the order of our logs even though if it there isn't an actual delay.
+This is a lot of information to take in. Below is an example of a JavaScript program, with lots of logs to the console. Within each console log statement, I've briefly summarized the action that is happening and have prefaced it with a number. The number represents the order it'll print to the console when our program runs.
+
+To demonstrate the Queue, I've used `setTimeout()` from our browsers Web API. I've set the timeout to zero on both instances, to show that it won't impact the order of our logs even though there isn't an actual delay.
 
 ```javascript
 console.log("1. JavaScript Engine is Processing Program.")
@@ -82,14 +89,11 @@ console.log("8. Callstack is empty and will process events from the Queue.")
 
 I hope this post helped you get a better understanding of the Thread of Execution in JavaScript. If you'd like to dive deeper in to the subject and view more examples, I'd highly recommend the following:
 
-##### Video Resources:
+##### Resources:
 
-- Philip Roberts - [What the Heck is the Event Loop Anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-- Code Smith - [Introduction to Functions, Execution Context and the Call Stack](https://www.youtube.com/watch?v=exrc_rLj5iw)
-- Colt Steele - [The JS Call Stack Explained in 9 Minutes](https://www.youtube.com/watch?v=W8AeMrVtFLY)
-
-##### Written Resources:
-
-- Gaurav Pandvia - [Understanding JavaScript Function Executions](https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec)
-- Charles Freeborn - [JavasScript Call Stack What It Is and Why It's Necessary](https://www.freecodecamp.org/news/understanding-the-javascript-call-stack-861e41ae61d4/)
-- Ionel Hindorean - [How JavaScript Works](https://medium.com/better-programming/how-javascript-works-1706b9b66c4d)
+- [What the Heck is the Event Loop Anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ) by Philip Roberts
+- [JavasScript Call Stack What It Is and Why It's Necessary](https://www.freecodecamp.org/news/understanding-the-javascript-call-stack-861e41ae61d4/) by Charles Freeborn
+- [Introduction to Functions, Execution Context and the Call Stack](https://www.youtube.com/watch?v=exrc_rLj5iw) by Code Smith
+- [Understanding JavaScript Function Executions](https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec) by Gaurav Pandvia
+- [The JS Call Stack Explained in 9 Minutes](https://www.youtube.com/watch?v=W8AeMrVtFLY) by Colt Steele
+- [How JavaScript Works](https://medium.com/better-programming/how-javascript-works-1706b9b66c4d) by Ionel Hindorean

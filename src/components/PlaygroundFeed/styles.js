@@ -10,5 +10,9 @@ export const PlaygroundContent = styled.article`
 `
 
 export const PlaygroundHeading = styled.h3`
-  margin: 0 0 var(--scale-3);
+  margin: 0;
+`
+
+export const PlaygroundInfo = styled.div`
+  margin-top: var(--scale-3);
 `
