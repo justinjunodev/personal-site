@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import useSiteMeta from '../../hooks/useSiteMeta'
 import Layout from '../Layout'
 import Header from '../Header'
+import Link from '../Link'
 import Share from '../Share'
 import SEO from '../SEO'
 
@@ -19,7 +20,12 @@ const Post = ({ data: { mdx: post } }) => {
         <h2>{post.frontmatter.title}</h2>
         <MDXRenderer>{post.body}</MDXRenderer>
       </article>
-      <Share title={post.frontmatter.title} url={source} />
+      <hr />
+      <Share
+        title={post.frontmatter.title}
+        devto={post.frontmatter.devto}
+        url={source}
+      />
     </Layout>
   )
 }
@@ -37,6 +43,7 @@ export const query = graphql`
         slug
         title
         date
+        devto
       }
       body
     }

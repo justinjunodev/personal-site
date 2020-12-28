@@ -12,6 +12,7 @@ const usePosts = () => {
             slug
             title
             date
+            devto
           }
           excerpt
         }
@@ -23,6 +24,7 @@ const usePosts = () => {
     slug: post.frontmatter.slug,
     title: post.frontmatter.title,
     date: post.frontmatter.date,
+    devto: post.frontmatter.devto,
     excerpt: post.excerpt,
   }))
 }
