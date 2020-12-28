@@ -17,6 +17,9 @@ const Nav = () => (
         <Link to="/blog">Blog</Link>
       </S.NavMenuItem>
       <S.NavMenuItem>
+        <Link to="/playground">Play</Link>
+      </S.NavMenuItem>
+      <S.NavMenuItem>
         <Link to="/uses">Uses</Link>
       </S.NavMenuItem>
     </S.NavMenu>
