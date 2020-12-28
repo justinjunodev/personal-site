@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ShareContent = styled.aside`
+export const ShareContent = styled.div`
   display: flex;
   align-items: center;
   margin-top: var(--scale-3);
