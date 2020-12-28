@@ -4,6 +4,7 @@ export const PostContent = styled.article`
   background: var(--dark-alt);
   padding: var(--scale-5);
   margin-top: var(--scale-5);
+  text-shadow: 1px 1px 2px var(--dark);
   :last-of-type {
     margin-bottom: var(--scale-8);
   }
