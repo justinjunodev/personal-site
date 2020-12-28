@@ -7,23 +7,23 @@ export const GlobalStyles = createGlobalStyle`
         --heading: 700;
         --bold: 500;
         --copy: 400; 
-        --scale-8: 7.595rem;
-        --scale-7: 5.065rem;
-        --scale-6: 3.375rem;
-        --scale-5: 2.25rem;
-        --scale-4: 1.5rem;
+        --scale-8: 4.207rem;
+        --scale-7: 3.157rem;
+        --scale-6: 2.369rem;
+        --scale-5: 1.777rem;
+        --scale-4: 1.333rem;
         --scale-3: 1rem;
         --scale-2: .75rem;
-        --scale-1: 0.5rem; 
-        --border: 0.4rem;
-        --primary: #ff8906;
-        --secondary: #f25f4c;
-        --tertiary: #e53170;
-        --gradient: linear-gradient(115deg, #ff8906 0%, #f25f4c 100%); 
-        --dark: #000001;
-        --dark-alt: #111119;
-        --light: #fffffe;
-        --light-alt: #b7b9ce;
+        --scale-1: 0.563rem; 
+        --border: 0.422rem;
+        --primary: #FF8906;
+        --secondary: #F25F4C;
+        --tertiary: #E53170;
+        --gradient: linear-gradient(115deg, #FF8906 0%, #F25F4C 100%); 
+        --dark: #050506;
+        --dark-alt: #161617;
+        --light: #FDFDFE;
+        --light-alt: #BDBDBE;
     }
     * {
         box-sizing: border-box;
@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
     html {
-        font-size: 16px;
+        font-size: 17px;
         text-size-adjust: 100%;
     }
     body {

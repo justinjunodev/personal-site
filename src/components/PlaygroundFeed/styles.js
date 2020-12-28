@@ -5,7 +5,7 @@ export const PlaygroundContent = styled.article`
   padding: var(--scale-5) var(--scale-5) var(--scale-3);
   margin-top: var(--scale-5);
   :last-of-type {
-    margin-bottom: var(--scale-7);
+    margin-bottom: var(--scale-8);
   }
 `
 

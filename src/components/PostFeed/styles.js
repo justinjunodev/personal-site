@@ -5,7 +5,7 @@ export const PostContent = styled.article`
   padding: var(--scale-5);
   margin-top: var(--scale-5);
   :last-of-type {
-    margin-bottom: var(--scale-7);
+    margin-bottom: var(--scale-8);
   }
 `
 

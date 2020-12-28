@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContent = styled.header`
-  margin: var(--scale-7) 0;
+  margin: var(--scale-8) 0;
 `
 
 export const HeaderHeading = styled.h1``
