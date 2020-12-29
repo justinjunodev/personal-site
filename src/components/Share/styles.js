@@ -8,12 +8,14 @@ export const ShareContent = styled.div`
 
 export const ShareMessage = styled.p`
   font-size: var(--scale-3);
-  color: var(--light);
   font-weight: var(--bold);
+  color: var(--light);
+  text-shadow: 1px 1px 2px var(--dark);
   margin-bottom: var(--scale-2);
 `
 
 export const ShareMenu = styled.ul`
+  text-shadow: 1px 1px 2px var(--dark);
   margin-bottom: 0;
 `
 

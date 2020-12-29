@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
     :root {
         --sans: 'Work Sans', sans-serif;
-        --mono: 'JetBrains Mono', monospace;
+        --mono: 'Space Mono', monospace;
         --heading: 700;
         --bold: 500;
         --copy: 400; 
@@ -185,8 +185,10 @@ export const GlobalStyles = createGlobalStyle`
     pre[class*='language-'] {
         color: var(--light);
         font-family: var(--mono);
+        font-weight: var(--copy);
         font-style: italic;
-        font-size: .925rem;
+        font-size: var(--scale-2);
+        text-shadow: 1px 1px 2px var(--dark);
         background: var(--dark-alt);
         text-align: left;
         white-space: pre;
